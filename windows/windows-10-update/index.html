@@ -3,6 +3,7 @@
 	<head>
 		<title>Windows Update</title>
 		<link rel="icon" type="image/png" href="win10.png"/>
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 		<meta charset="UTF-8">
 		<meta name="description" content="Fake Windows 10 Update screen">
 		<meta name="keywords" content="prank, fake windows, fake windows 10, fake windows update, prank windows update, windows 10 update animation, segoe boot semilight, windows 10, boot, startup, blue screen">
@@ -16,14 +17,21 @@
 				font-family: segoe;
 				src: url(segoe.ttf);
 			}
+			:root {
+				touch-action: pan-x pan-y;
+				height: 100%;
+			}
 			html {
 				font-size: 16px;
+				overflow: hidden;
 			}
 			body {
 				position: relative;
 				width: 100vw;
 				height: 100vh;
+				height: 100svh;
 				margin: 0;
+				overflow: hidden;
 			}
 			div#windows {
 				position: relative;
@@ -39,6 +47,7 @@
 				background: rgb(1, 100, 182);
 				color: #ffffff;
 				text-align: center;
+				overflow: hidden;
 				
 				user-select: none;
 				
@@ -131,6 +140,7 @@
 				touch-action: none;
 				pointer-events: none;
 				z-index: -100;
+				overflow: hidden;
 			}
 		</style>
 	</head>
